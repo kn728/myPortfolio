@@ -42,8 +42,7 @@ function App() {
               <Button  variant="contained" onClick ={getCard}>Hit</Button>
             </div>
           </div>
-        </div>
-          
+        </div>          
       </div>
     </React.Fragment> 
   )
