@@ -4,13 +4,15 @@ import {Button, Card} from '@mui/material'
 function App() {
   const [currDeck, setDeck] = React.useState({})
   const [currCards, SetCards] = React.useState([])
-
+  const [total, setTotal] = React.useState(0)
+  
   function shuffle() {
     fetch("https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
     .then(res => res.json())
     .then(data =>  setDeck(data))
 
     SetCards([])
+    setTotal(0)
   }
 
   function getCard() {
@@ -18,8 +20,17 @@ function App() {
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      const v = parseInt(data.cards[0].value)
+     
+      if(!(v <= 10)) {
+        setTotal(prev => (prev + 10))
+       } else {
+       setTotal(prev => (prev + parseInt(v)))
+      }
       SetCards(prev =>[...prev, data.cards[0]])
     })
+     
+    
   }
 
   let hand = currCards.map((item, i) => {
@@ -32,6 +43,7 @@ function App() {
   return (
     <React.Fragment>
       <div style={{width: '100%', height:'100%', position:'fixed', backgroundColor:'green'}}>
+        <h1>{total}</h1>
         <div style={{top: '60%', width: '100%',position: 'fixed',  display: 'flex', justifyContent: 'center'}}>
           <div style ={{minWidth: '50%',maxWidth: '100%',  display: 'flex', flexDirection:'column'}}>
             <Card sx={{backgroundColor:'darkgreen', display: 'flex', justifyContent:'center'}}>
