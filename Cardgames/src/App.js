@@ -35,7 +35,7 @@ function App() {
 
   let hand = currCards.map((item, i) => {
     return (
-    <img key ={i} src= {item.image} style={{padding: '5px'}} />
+    <img key ={i} src= {item.image} style={{padding: '15px 10px 15px 10px'}} />
     )
   })
 
