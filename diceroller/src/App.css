@@ -48,3 +48,19 @@
   top: 25%;
   left:25%;
 }
+
+.diceAnimate {
+  animation: roll 0.8s;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}

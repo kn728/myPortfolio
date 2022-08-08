@@ -26,11 +26,11 @@ export default function Dice() {
             console.log(dice)                 
         }
     }
-    
-    let manyDice    
-    manyDice = dice.map((number, index) => {
+    const [isAnimated, setIsAnimated] = React.useState("")
+   
+    let manyDice = dice.map((number, index) => {
            return (
-            <div key={index} data-index={index}
+            <div key={index} data-index={index} 
                     style=
                         {{width: '50px', height:'50px', 
                         backgroundColor: "yellow",  
@@ -38,7 +38,8 @@ export default function Dice() {
                         margin: '10px',
                         display:'flex', justifyContent:'center' 
                     , alignItems:'center', padding:'10px'}}
-                        onClick={setDiceNumber}               
+                        onClick={setDiceNumber} 
+                        className= {isAnimated}              
                 >
                        {number}     
                 </div>
@@ -52,16 +53,26 @@ export default function Dice() {
         const x = e.currentTarget.dataset.index
         const copy = [...dice];
         copy[x] = Math.floor(Math.random() * (7 - 1) ) + 1
-        changeDice(copy)
+        e.target.classList.add('diceAnimate')       
+        setTimeout(function() {
+            e.target.classList.remove("diceAnimate")
+            changeDice(copy)
+        }, 800)
         
     }
+    
 
-    function roll() {
+    function rollAll() {
         const copy = Array(dice.length)
-        for(let i=0; i < copy.length; i++) {
+        for(let i=0; i < copy.length; i++) {            
             copy[i] = Math.floor(Math.random() * (7 - 1) ) + 1
-        }
-        changeDice(copy)
+        }       
+        setIsAnimated("diceAnimate")
+        setTimeout(() => {
+            setIsAnimated("")
+            changeDice(copy)
+        }, 800) 
+        
     }
   
 
@@ -75,7 +86,7 @@ export default function Dice() {
            <div style={{display:'flex', margin: '20px', flexWrap:'wrap'}}>
              {manyDice}
            </div>
-           <Button variant="contained" onClick={roll}>roll</Button>
+           <Button variant="contained" onClick={rollAll}>roll</Button>
         </Card>
         
     )
