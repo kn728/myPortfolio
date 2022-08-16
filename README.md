@@ -1,2 +1,2 @@
 # myPortfolio
-All my practice projects go here
+All my completed practice projects go here
