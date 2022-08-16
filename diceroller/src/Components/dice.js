@@ -6,6 +6,7 @@ import { flexbox } from "@mui/system";
 
 export default function Dice() {
     const [numOfDice, setNum] = React.useState(0)
+    
     const [dice, changeDice] = React.useState([]);
 
     
