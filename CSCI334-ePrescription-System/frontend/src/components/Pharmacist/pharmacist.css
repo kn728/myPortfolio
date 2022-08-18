@@ -1,0 +1,101 @@
+.pharmStructure{
+    display:flex;
+}
+.pageMargin {
+    margin-left: 20px;
+    width: 100%;
+    min-width: 1000px;
+}
+
+.patIdholder {
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;    
+}
+
+.lblSearch {
+    margin-left: 80px;
+    margin-right: 5px;
+}
+
+.phInput {
+    display: flex;
+    align-items: center;
+}
+.phInput > button{
+    margin-left: 20px;
+}
+
+.scriptsButton {
+    margin-left: 20px;
+    height: 50px;
+    width: 150px;
+}
+.phStructure{
+    display:flex;
+}
+
+.phDisplay {
+    margin-top: 30px;
+    border-style:groove;
+    height: 900px;
+    width: 46%;
+    padding-left: 10px;
+}
+
+.reactionDisplay {  
+    margin-top:30px; 
+    border-style:groove;
+    height: 900px;
+    width: 46%;
+}
+
+.reactionStructure {
+    display:flex;
+    justify-content: space-around;
+}
+
+.reactionDisplay > h3 {
+    margin-left: 10px;    
+}
+
+.presList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-style: groove;
+    padding-left:10px;
+}
+
+.pdata{
+    border-left-style: groove;
+    padding-left:5px;
+    padding-right:2px;
+}
+
+.checkHolder{
+    border-left-style: groove;
+}
+.checkScript{
+    margin-right:20px;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    border-left-style: groove;
+}
+.disSend{    
+    height: 50px;
+    width: 150px;
+     
+}
+.phBack {
+    width:100px;
+    height:30px;
+    margin-top:5px;
+    margin-left: 87%;
+}
+
+.note {
+    color: red;
+    margin-left: 5px;
+}
