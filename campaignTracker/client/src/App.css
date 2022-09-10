@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+
+}
+*{
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+
+}
+
+.page {
+  margin-top: 10vh;
+  min-height: 80vh;
+  width: 100%;
+  
+}
+
+.landImage {
+  opacity:0.7;
+}
+.landingdndHover {
+  background-image:url(./images/dndCharacter.png);
+  background-size: 100% 80vh;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.landingcampHover {
+  background-image: url(./images/fantasyTown.png);
+  background-size: 100% 80vh;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+
+}
+
+
+.landingdndHover:hover {
+ opacity: 1;
+}
+.landingcampHover:hover {
+  opacity: 1;
+ }
+ 
+
+

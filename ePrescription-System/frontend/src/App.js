@@ -9,8 +9,12 @@ import PharmacistDashboard from "./components/Pharmacist/PharmacistDashboard"
 
 import NavBar from "./components/NavBar"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import React from "react";
  
 function App() {
+  React.useEffect(() => {
+    
+  }, [])
   
   return (
     <Router>

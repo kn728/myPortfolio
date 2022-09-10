@@ -48,7 +48,7 @@ export default function DoctorRegisterPatient() {
     const [phone, setPhone] = React.useState();
     const [email, setEmail] = React.useState();
     const [age, setAge] = React.useState();
-
+    
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
