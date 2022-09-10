@@ -6,7 +6,8 @@ import Login from './Pages/login';
 import Register from './Pages/register';
 import LandingPage from './Pages/LandingPage';
 import CampaignMap from './Pages/CampaignMap';
-import CreateCharacter from './Pages/createCharacter';
+import CreateCharacter from './Pages/characters/createCharacter';
+import CharacterLanding from './Pages/characters/CharacterLanding';
 import Home from './Pages/home';
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/landing" element={<LandingPage />}></Route>
-
+          <Route path="/charLanding" element={<CharacterLanding />} ></Route>
       </Routes>
       <Footer />
       

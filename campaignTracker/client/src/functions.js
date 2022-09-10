@@ -26,3 +26,4 @@ export function Reg(name, userName, email, password) {
         body: JSON.stringify(user)
     }).then(res => res.json()).then(data => console.log(data))
 }
+
